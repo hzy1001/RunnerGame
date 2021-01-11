@@ -3,34 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <title>HTML5 GameFramework</title>  
-        <!-- FaceBook SDK -->
-        <div id="fb-root"> </div>
-        <script src="http://connect.facebook.net/ko_KR/all.js"></script>
-        <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '443526712351056', 
-                status: true, 
-                cookie: true, 
-                xfbml: true  
-            });
-        };
-        FB.login(
-            function(response) 
-            {
-                if( response.authResponse ){
-                    console.log('잠시만요, 정보를 가져오고 있습니다. ');
-                    FB.api('/me', function(response) {
-                        console.log('반가워요 , ' + response.name + '씨.');
-                });
-                } 
-                else {
-                    console.log('로그인에 실패했습니다.');
-                }
-            }, {scope: 'email,user_likes'});
-            
-        };
-        </script>
         <!-- GameFramework-->
         <script src="gfw/FrameCounter.js"></script> 
         <script src="gfw/FrameSkipper.js"></script>  

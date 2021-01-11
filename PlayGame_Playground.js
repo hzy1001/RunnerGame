@@ -30,6 +30,8 @@ PGPlayground.prototype.Init = function( )
     this.AddItem( "coin" );
 }
 
+
+
 PGPlayground.prototype.AddObject = function( type )
 {
     var obj;
@@ -54,6 +56,9 @@ PGPlayground.prototype.AddObject = function( type )
     this.lastObj = obj;   
 }
 
+
+
+
 PGPlayground.prototype.Render = function( )
 {
     var theCanvas = document.getElementById("GameCanvas");
@@ -61,9 +66,7 @@ PGPlayground.prototype.Render = function( )
     
     for( var i = 0; i < this.arrObjects.length; i++ )
     {
-        if( this.arrObjects[i].x > 800 )
-            continue;
-        this.arrObjects[i].Render( Context );
+       this.arrObjects[i].Render( Context );
     }
 }
 
@@ -146,7 +149,5 @@ PGPlayground.prototype.AddItem = function( type )
     
     this.arrObjects.push( obj ); 
 }
-
-
 
 

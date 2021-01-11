@@ -87,22 +87,6 @@ PlayGameState.prototype.Notification = function( msg )
         case "COLLISION_ELEGATOR":
         // 악어와 충돌 : 게임 오버
         this.isGameOver = true;
-        FB.ui(
-                  {
-                   method: 'feed',
-                   name: '보물을 찾아서!! ',
-                   caption: '기록 정보',
-                   description: (
-                      '테스트용 게임에서  ' +
-                      this.score +
-                      '점을 기록하였습니다!!'
-                   ),
-                   link: 'http://apps.facebook.com/runnergame_hanb/',
-                   picture: 'http://lancekun.iptime.org:8080/runnergame/img_facebook_feed.png'
-                  },
-                  function(response) {
-                  }
-               );
         break;
         case "PLAYER_GET_COIN":
         // 코인을 습득하면 10점 추가
